@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Guru - Your Perfect Gift Shop in Shiralkoppa</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Custom styles to integrate Google Fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFF8F0; /* A very light, warm cream background */
+        }
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url('https://placehold.co/1600x900/f8c291/FFFFFF?text=Welcome+to+Gift+Guru');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-pacifico text-3xl text-amber-600">Gift Guru</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-amber-600 transition duration-300">About</a>
+                <a href="#products" class="text-gray-600 hover:text-amber-600 transition duration-300">Products</a>
+                <a href="#work" class="text-gray-600 hover:text-amber-600 transition duration-300">Our Work</a>
+                <a href="#new-arrivals" class="text-gray-600 hover:text-amber-600 transition duration-300">New Arrivals</a>
+                <a href="#contact" class="text-gray-600 hover:text-amber-600 transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-amber-600">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-amber-100">About</a>
+            <a href="#products" class="block py-2 px-4 text-sm hover:bg-amber-100">Products</a>
+            <a href="#work" class="block py-2 px-4 text-sm hover:bg-amber-100">Our Work</a>
+            <a href="#new-arrivals" class="block py-2 px-4 text-sm hover:bg-amber-100">New Arrivals</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-amber-100">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-32 text-center">
+            <h1 class="font-pacifico text-5xl md:text-7xl mb-4">Find the Perfect Gift</h1>
+            <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto">For every occasion, every emotion, and every person. Curated with love, just for you.</p>
+            <a href="#products" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Explore Our Collection</a>
+        </div>
+    </section>
+
+    <!-- About & Location Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Welcome to <span class="font-pacifico text-amber-600">Gift Guru</span></h2>
+                <p class="text-lg text-gray-600">Your one-stop shop for heartfelt gifts and custom creations.</p>
+                <div class="mt-4 inline-flex items-center bg-amber-100 text-amber-800 px-4 py-2 rounded-full">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Munciple Market, Shiralkoppa</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">What We Offer</h2>
+                <p class="text-lg text-gray-600">A wide range of gifts to make every moment special.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+                <!-- Product Categories -->
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-image fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Frames</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-mug-hot fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Mugs</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-bottle-water fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Bottles</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-clock fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Clocks</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-bear fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Teddy Bears</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-utensils fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Crockeries</h3>
+                </div>
+                <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-wand-magic-sparkles fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Custom Gifts</h3>
+                </div>
+                 <div class="p-6 bg-amber-50 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-gift fa-3x text-amber-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold">And More!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Our Work</h2>
+                <p class="text-lg text-gray-600">Take a look at some of our favorite custom creations.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Custom+Mug" alt="Customized Mug" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Personalized Photo Mug</h3>
+                        <p class="text-gray-600 mt-2">A beautiful mug featuring a client's favorite photo and a heartfelt message.</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Engraved+Frame" alt="Engraved Photo Frame" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Engraved Wooden Frame</h3>
+                        <p class="text-gray-600 mt-2">A custom-engraved frame for a wedding anniversary, marking a special date.</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Custom+Clock" alt="Custom Wall Clock" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Family Photo Wall Clock</h3>
+                        <p class="text-gray-600 mt-2">A unique wall clock designed with a collage of family pictures.</p>
+                    </div>
+                </div>
+                 <!-- Gallery Item 4 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Custom+Bottle" alt="Custom Water Bottle" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Personalized Water Bottle</h3>
+                        <p class="text-gray-600 mt-2">Sleek and stylish bottle with a custom name and design.</p>
+                    </div>
+                </div>
+                 <!-- Gallery Item 5 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=Gift+Hamper" alt="Custom Gift Hamper" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Curated Gift Hamper</h3>
+                        <p class="text-gray-600 mt-2">A special hamper with a mix of goodies, tailored to the client's request.</p>
+                    </div>
+                </div>
+                 <!-- Gallery Item 6 -->
+                <div class="gallery-item bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/600x400/e2e8f0/333?text=T-Shirt+Print" alt="Custom T-Shirt" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl">Custom T-Shirt Print</h3>
+                        <p class="text-gray-600 mt-2">Fun and quirky t-shirt designed for a birthday celebration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section id="new-arrivals" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">New Arrivals</h2>
+                <p class="text-lg text-gray-600">Check out the latest additions to our collection!</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- New Arrival Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x600/f6e58d/333?text=New+Clock" alt="New Arrival 1" class="w-full h-72 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 rounded-bl-lg">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Vintage Style Clocks</h3>
+                    </div>
+                </div>
+                <!-- New Arrival Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                     <div class="relative">
+                        <img src="https://placehold.co/600x600/ffbe76/333?text=New+Teddy" alt="New Arrival 2" class="w-full h-72 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 rounded-bl-lg">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Jumbo Teddy Bears</h3>
+                    </div>
+                </div>
+                <!-- New Arrival Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                     <div class="relative">
+                        <img src="https://placehold.co/600x600/badc58/333?text=New+Crockery" alt="New Arrival 3" class="w-full h-72 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 rounded-bl-lg">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Designer Crockery Sets</h3>
+                    </div>
+                </div>
+                <!-- New Arrival Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                     <div class="relative">
+                        <img src="https://placehold.co/600x600/ff7979/333?text=New+Mug" alt="New Arrival 4" class="w-full h-72 object-cover">
+                        <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 rounded-bl-lg">NEW</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg">Magic Color-Changing Mugs</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-2">Get In Touch</h2>
+                <p class="text-lg text-gray-600">Visit us or send us a message. We'd love to hear from you!</p>
+            </div>
+            <div class="flex flex-wrap -mx-4">
+                <!-- Contact Info -->
+                <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                    <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-2xl font-bold mb-4">Visit Our Store</h3>
+                        <p class="text-lg mb-4">
+                            <strong class="text-amber-600">Gift Guru</strong><br>
+                            Munciple Market,<br>
+                            Shiralkoppa, Karnataka
+                        </p>
+                        <h3 class="text-2xl font-bold mb-4 mt-8">Opening Hours</h3>
+                        <p class="text-lg">Monday - Saturday: 10:00 AM - 9:00 PM</p>
+                        <p class="text-lg">Sunday: Closed</p>
+
+                        <div class="mt-8">
+                             <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                             <div class="flex space-x-4">
+                                <a href="#" class="text-gray-500 hover:text-amber-600 text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="#" class="text-gray-500 hover:text-amber-600 text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-gray-500 hover:text-amber-600 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Map -->
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full">
+                        <!-- Replace this iframe with your actual Google Maps embed code -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15501.884557992984!2d75.25055065!3d14.3838848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb8d1478726563%3A0x9d543daf43e62f5!2sShiralakoppa%2C%20Karnataka%20577428!5e0!3m2!1sen!2sin!4v1678886456789!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Gift Guru. All Rights Reserved.</p>
+            <p class="text-sm text-gray-400 mt-2">Designed with <i class="fas fa-heart text-red-500"></i> for the love of gifting.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
